@@ -1,0 +1,165 @@
+\documentclass[aspectratio  =  169, 15pt]{beamer}
+\input{functions/constants.tex}
+\input{functions/styles/stylesColors.tex}
+
+\usetheme[
+    progressbar  =  frametitle,% progress bar of slides. Can be none, head, frametitle, foot
+    titleformat title  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat subtitle  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat section  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat frame  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    sectionpage  =  simple,% can be none, simple, progressbar
+    subsectionpage  =  none,% can be none, simple, progressbar
+    numbering  =  fraction,% for slide numbers can be none, counter, fraction
+    background  =  light% for slides and text dark light contrasts. Can be light or dark
+]{metropolis}
+
+\hyphenpenalty = 10000% no hyphenation in presentation
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarksopen = true,
+    bookmarksopenlevel=4,
+    pdfstartview={Fit},
+    pdfpagemode=FullScreen,
+    pdffitwindow=true,
+    breaklinks = true,% to correctly break links
+    pdftitle = {\mydocumentfulltitle\ (\myauthor)},
+    pdfauthor = {\myauthor},
+    pdfsubject = {\mydocumentfulltitle},
+    pdfcreator = {\myauthor},
+    pdfproducer = {\myauthor},
+    pdfkeywords = {\mykeywords}
+}
+
+\setsansfont{Roboto}% text font
+\setmonofont{Roboto Mono}% monospace text font
+
+\setbeamercolor{normal text}{
+    fg = darkgray,% frame text color
+    bg  = whitesmoke% frame background color
+}
+\setbeamercolor{palette primary}{
+    fg  =  whitesmoke,% standout frame text color
+    bg  =  moderngreen% standout frame background color
+}
+\setbeamercolor{alerted text}{fg = darkgray}
+\setbeamercolor{frametitle}{
+    fg  =  whitesmoke,% frame title text color
+    bg  =  moderngreen% frame title background color
+}
+\setbeamercolor{progress bar}{
+    fg  =  goldenyellow,% progress bar text color
+    bg  =  moderngreen% progress bar background color
+}
+
+\author{\large\myauthor}
+\date{\mydateofpublishing}
+%\institute{\footnotesize\myinstitution\\\scriptsize\myinstitutiondepartment}
+%\titlegraphic{\hfill\includegraphics[width  =  0.1\linewidth]{images/LogoUniBG.pdf}}
+
+\def\titlepage{\usebeamertemplate{title page}}% removes hbox vbox overfulls usind beamer title page
+
+\usepackage{booktabs}% good looking tables. Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+\begin{document}
+    \begin{frame}[standout]
+        \normalfont
+        \textsc{\mydocumenttitle}
+        
+        \small\normalfont\mydocumentsubtitle
+        \vspace*{0.5cm}
+        \begin{columns}[t]
+            \column{0.7\textwidth}
+                \begin{center}
+                    \textcolor{whitesmoke}{\large\myauthor}
+                    
+                    \textcolor{whitesmoke}{\mydateofpublishing}
+                \end{center}
+                
+            \column{0.3\textwidth}
+                \begin{center}
+                    \includegraphics[width  =  0.15\paperwidth]{images/LogoUniBGwhite.pdf}
+                    
+                    \textcolor{whitesmoke}{\footnotesize\myinstitution\\\scriptsize\myinstitutiondepartment}
+                \end{center}
+        \end{columns}
+    \end{frame}
+    \setbeamercolor{background canvas}{fg=moderngreen,bg=whitesmoke}
+    \setbeamercolor{normal text}{
+        fg = darkgray,% frame text color
+        bg  = whitesmoke% frame background color
+    }
+    
+    \section{First Section}
+    
+    \begin{frame}{Your Title}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+    \end{frame}
+    
+    
+    \begin{frame}{Your Title}
+        nsectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+        
+        \begin{itemize}
+        	\item che mostrino l'{\color{mauve}Albero Sintattico},
+        	\item che stampino la {\color{orange}Tabella dei Simboli},
+        	\item e che nello stesso tempo facciano da {\color{blue}Compilatore}.
+        \end{itemize}
+    \end{frame}
+    
+    \section{2 Section}
+    
+    \begin{frame}{Your Title}
+        Lorem ipsum dolor sit amet, conse purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+        \begin{columns}[t]
+        \column{.30\textwidth}
+            \begin{itemize}
+            	\item vedere ed esportare l'{\color{yellow}Albero Sintattico} del parsing di un programma
+            \end{itemize}
+            \column{.67\textwidth}
+            \vspace*{-25pt}
+            \begin{figure}[H]
+                \centering
+                \noindent\makebox[\textheight]{
+                    \includegraphics[
+                        width=0.5\paperwidth,
+                        height=0.5\paperheight,
+                        keepaspectratio
+                    ]{images/LogoUniBG.pdf}
+                }
+            \end{figure}
+        \end{columns}
+    \end{frame}
+    
+    \begin{frame}{Your Title}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut t, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+    \end{frame}
+    
+    \section{3 Section}
+    
+    \begin{frame}{Your Title}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur
+    \end{frame}
+    
+    \begin{frame}
+    \setbeamertemplate{background}{red}
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur
+    \end{frame}
+    
+    
+    \begin{frame}[standout]
+        Thank you!
+        
+        Questions?
+        
+        \begin{columns}[t]
+        \column{.30\textwidth}
+            \myauthor
+            \column{.67\textwidth}
+            \vspace*{-25pt}
+            \mydocumentfulltitle
+        \end{columns}
+    \end{frame}
+
+\end{document}
