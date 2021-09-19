@@ -10,7 +10,7 @@
     titleformat frame  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
     sectionpage  =  simple,% can be none, simple, progressbar
     subsectionpage  =  none,% can be none, simple, progressbar
-    numbering  =  fraction,% for slide numbers can be none, counter, fraction
+    numbering  =  none,% for slide numbers can be none, counter, fraction
     background  =  light% for slides and text dark light contrasts. Can be light or dark
 ]{metropolis}
 
@@ -53,48 +53,296 @@
     bg  =  moderngreen% progress bar background color
 }
 
-\author{\large\myauthor}
-\date{\mydateofpublishing}
-%\institute{\footnotesize\myinstitution\\\scriptsize\myinstitutiondepartment}
-%\titlegraphic{\hfill\includegraphics[width  =  0.1\linewidth]{images/LogoUniBG.pdf}}
-
-\def\titlepage{\usebeamertemplate{title page}}% removes hbox vbox overfulls usind beamer title page
-
 \usepackage{booktabs}% good looking tables. Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage{multicol}% text in multiple columns, useful for side-by-side text and pictures
+
+\usepackage{tikz}
+\usetikzlibrary{backgrounds,calc}
+
+%%%%% notes %%%%%
+\usepackage{pgfpages}
+%\setbeameroption{hide notes}% Show only slides
+%\setbeameroption{show only notes}% Show only notes
+\setbeameroption{show notes on second screen=bottom}% Show notes and slides
+\setbeamerfont{note page}{size=\large}
+\setbeamertemplate{itemize/enumerate subbody begin}{\large}
+%%%%%%%%%%%%%%%%%
+
 \begin{document}
-    \begin{frame}[standout]
-        \normalfont
-        \textsc{\mydocumenttitle}
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapershidden.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            Qualcuno saprebbe riconoscere chi sono le persone in questa slide?
         
-        \small\normalfont\mydocumentsubtitle
-        \vspace*{0.5cm}
+            {\color{orange}\textit{wait 5 seconds}}
+        }
+        \note[item]{
+            Vediamolo:
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapersrevealed.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            Putin, Assad, Poroshenko, il re Salman, Ahmadinejad...
+            
+            Tutti politici di altissimo livello...
+        }
+        \note[item]{
+            che appaiono nel...
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapersrevealedtitled.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            ...Panama Papers leak.
+        }
+        \note[item]{
+            Ma cosa era Panama Papers?
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/newspapers.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item In aprile 2016,
+                \item grazie ad un informatore,
+                \item l'inchiesta di 307 giornalisti da 76 paesi ha portato alla luce documenti e informazioni
+                \item su migliardi di denaro dirottati da studi legali internazionali e banche verso paradisi fiscali
+                \item per conto di...
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/Assad.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            ... leader politici, criminali ...
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/art.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            ... funzionari d'intelligence, artisti ...
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/FIFA1.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            ... VIP dello sport ...
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/Messi.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            ... e dello spettacolo.
+            
+            {\color{orange}\textit{wait 5 seconds}}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Quanto era grande il dataset leakato?
+                \item ... come erano strutturati i dati?
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datasetsizenew.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            Il leak era di dimensione 2.6 TB, 1500 volte più grande del Cablegate del 2010 di Wikileaks.
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datatypes.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            La maggior parte dei dati erano non strutturati, sotto forma di email, files PDF e immagini inviati.
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datasetsizeandtypes.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            Come si può indagare su un dataset così immenso e in gran parte fatto di dati non strutturati?
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/team.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            Loro, un team composto da giornalisti investigativi ed esperti di database a grafi ce l'hanno fatta.
+        }
+        \note[item]{
+            Facendo buon uso delle relazioni che derivano da dati interconnessi (ad esempio le mail, le dipendenze tra le entità) ...
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/graph.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item ... e di nuove tecnologie (come i database a grafi),
+                \item hanno generato grafi rappresentanti le entità e le connessioni tra loro,
+                \item interrogabili
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}[noframenumbering,standout]
+        \normalfont
+        
+        \vspace*{0.75cm}
+        \fontsize{26pt}{33pt}\selectfont\textsc{\break\mydocumenttitle}
+        
         \begin{columns}[t]
-            \column{0.7\textwidth}
+            \column{0.13\textwidth}
+            
+            \column{0.69\textwidth}
+                \vspace*{-1.25cm}
                 \begin{center}
-                    \textcolor{whitesmoke}{\large\myauthor}
+                    \Large\normalfont\mydocumentsubtitle
                     
-                    \textcolor{whitesmoke}{\mydateofpublishing}
+                    \vspace*{0.5cm}
+                    \normalsize\textbf{\myauthor}
                 \end{center}
                 
-            \column{0.3\textwidth}
-                \begin{center}
-                    \includegraphics[width  =  0.15\paperwidth]{images/LogoUniBGwhite.pdf}
                     
-                    \textcolor{whitesmoke}{\footnotesize\myinstitution\\\scriptsize\myinstitutiondepartment}
-                \end{center}
+                %\mydateofpublishing
+                
+                \begin{tikzpicture}[remember picture,overlay]
+                    \begin{pgfonlayer}{background}
+                        \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                            \includegraphics[width = 0.25\paperwidth]{images/LogoUniBGwhiterotatedcut.pdf}
+                        };
+                    \end{pgfonlayer}
+                \end{tikzpicture}
+                
+            \column{0.13\textwidth}
         \end{columns}
     \end{frame}
-    \setbeamercolor{background canvas}{fg=moderngreen,bg=whitesmoke}
-    \setbeamercolor{normal text}{
-        fg = darkgray,% frame text color
-        bg  = whitesmoke% frame background color
-    }
     
-    \section{First Section}
+    \section{What are graphs?}
     
-    \begin{frame}{Your Title}
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+    \begin{frame}{Milan Metro subway stations and lines (vertices and edges)}
+        \centering
+        \includegraphics[width = 0.78\paperwidth, height = 0.78\paperheight, keepaspectratio]{images/ch2/WikipediaMilanoMetro2021Graphedit.pdf}
+    \end{frame}
+    
+    \section{What about graph databases?}
+    
+    \begin{frame}{Database types ordered by complexity of data}
+        \centering
+        \includegraphics[width = 0.78\paperwidth, height = 0.78\paperheight, keepaspectratio]{images/ch1/BechbergerPerryman2020page8.pdf}
     \end{frame}
     
     
@@ -126,7 +374,7 @@
                         width=0.5\paperwidth,
                         height=0.5\paperheight,
                         keepaspectratio
-                    ]{images/LogoUniBG.pdf}
+                    ]{images/LogoUniBGwhiterotatedcut.pdf}
                 }
             \end{figure}
         \end{columns}
@@ -149,16 +397,29 @@
     
     
     \begin{frame}[standout]
-        Thank you!
+        \normalfont
+        \vspace*{2.25cm}
+        \Huge Thank you!
         
+        \vspace*{0.625cm}
         Questions?
-        
+        \vspace*{0.125cm}
         \begin{columns}[t]
-        \column{.30\textwidth}
-            \myauthor
-            \column{.67\textwidth}
-            \vspace*{-25pt}
-            \mydocumentfulltitle
+            \column{.08\textwidth}
+            
+            \column{.17\textwidth}
+                \vspace*{0.2cm}
+                \centering\normalsize\break\myauthor
+                
+            \column{.25\textwidth}
+                \vspace*{-0.9cm}
+                \begin{flushright}
+                    \large\textbf{\textsc{\break\mydocumenttitle}}
+                \end{flushright}
+                
+            \column{.315\textwidth} \scriptsize\normalfont\break\mydocumentsubtitle
+                
+            \column{.10\textwidth}
         \end{columns}
     \end{frame}
 
