@@ -1,17 +1,17 @@
-\documentclass[aspectratio  =  169, 15pt]{beamer}
+\documentclass[aspectratio = 169, 15pt]{beamer}
 \input{functions/constants.tex}
 \input{functions/styles/stylesColors.tex}
 
 \usetheme[
-    progressbar  =  frametitle,% progress bar of slides. Can be none, head, frametitle, foot
-    titleformat title  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
-    titleformat subtitle  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
-    titleformat section  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
-    titleformat frame  =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
-    sectionpage  =  simple,% can be none, simple, progressbar
-    subsectionpage  =  none,% can be none, simple, progressbar
-    numbering  =  none,% for slide numbers can be none, counter, fraction
-    background  =  light% for slides and text dark light contrasts. Can be light or dark
+    progressbar = frametitle,% progress bar of slides. Can be none, head, frametitle, foot
+    titleformat title =  regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat subtitle = regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat section = regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    titleformat frame = regular,% can be regular, smallcaps, allsmallcaps, allcaps
+    sectionpage = simple,% can be none, simple, progressbar
+    subsectionpage = none,% can be none, simple, progressbar
+    numbering = none,% for slide numbers can be none, counter, fraction
+    background = light% for slides and text dark light contrasts. Can be light or dark
 ]{metropolis}
 
 \hyphenpenalty = 10000% no hyphenation in presentation
@@ -37,20 +37,20 @@
 
 \setbeamercolor{normal text}{
     fg = darkgray,% frame text color
-    bg  = whitesmoke% frame background color
+    bg = whitesmoke% frame background color
 }
 \setbeamercolor{palette primary}{
-    fg  =  whitesmoke,% standout frame text color
-    bg  =  moderngreen% standout frame background color
+    fg = whitesmoke,% standout frame text color
+    bg = moderngreen% standout frame background color
 }
 \setbeamercolor{alerted text}{fg = darkgray}
 \setbeamercolor{frametitle}{
-    fg  =  whitesmoke,% frame title text color
-    bg  =  moderngreen% frame title background color
+    fg = whitesmoke,% frame title text color
+    bg = moderngreen% frame title background color
 }
 \setbeamercolor{progress bar}{
-    fg  =  goldenyellow,% progress bar text color
-    bg  =  moderngreen% progress bar background color
+    fg = goldenyellow,% progress bar text color
+    bg = moderngreen% progress bar background color
 }
 
 \usepackage{booktabs}% good looking tables. Allows the use of \toprule, \midrule and \bottomrule in tables
@@ -73,7 +73,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapershidden.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/coverpanamapapershidden.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -93,7 +97,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapersrevealed.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/coverpanamapapersrevealed.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -103,7 +111,7 @@
             Tutti politici di altissimo livello...
         }
         \note[item]{
-            che appaiono nel...
+            che apparvero nel...
             
             {\color{blue}\textit{go to next slide}}
         }
@@ -113,7 +121,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/coverpanamapapersrevealedtitled.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/coverpanamapapersrevealedtitled.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -131,15 +143,39 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/newspapers.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/informer.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
         \note[item]{
             \begin{itemize}
                 \item In aprile 2016,
-                \item grazie ad un informatore,
-                \item l'inchiesta di 307 giornalisti da 76 paesi ha portato alla luce documenti e informazioni
+                \item grazie ad un informatore ...
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/newspapers.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item ... l'inchiesta di 307 giornalisti da 76 paesi ha portato alla luce documenti e informazioni
                 \item su migliardi di denaro dirottati da studi legali internazionali e banche verso paradisi fiscali
                 \item per conto di...
             \end{itemize}
@@ -152,7 +188,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/Assad.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/Assad.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -167,7 +207,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/art.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/art.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -182,7 +226,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/FIFA1.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/FIFA1.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -197,7 +245,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/Messi.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/Messi.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -220,7 +272,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datasetsizenew.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/datasetsizenew.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -235,12 +291,16 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datatypes.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/datatypes.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
         \note[item]{
-            La maggior parte dei dati erano non strutturati, sotto forma di email, files PDF e immagini inviati.
+            La maggior parte dei dati erano non strutturati, sotto forma di emails, immagini e files PDF inviati.
             
             {\color{blue}\textit{go to next slide}}
         }
@@ -250,7 +310,11 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/datasetsizeandtypes.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/datasetsizeandtypes.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -265,13 +329,33 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/team.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/team.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
         \note[item]{
             Loro, un team composto da giornalisti investigativi ed esperti di database a grafi ce l'hanno fatta.
+            
+            {\color{blue}\textit{go to next slide}}
         }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/graphsmall.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
         \note[item]{
             Facendo buon uso delle relazioni che derivano da dati interconnessi (ad esempio le mail, le dipendenze tra le entità) ...
             
@@ -283,22 +367,62 @@
         \begin{tikzpicture}[remember picture,overlay]
             \begin{pgfonlayer}{background}
                 \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                    \includegraphics[width = 1\paperwidth, height = 1\paperheight, keepaspectratio]{images/panamapapers/graph.jpg}
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/neo4jcypher.jpg}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
         \note[item]{
             \begin{itemize}
                 \item ... e di nuove tecnologie (come i database a grafi),
-                \item hanno generato grafi rappresentanti le entità e le connessioni tra loro,
-                \item interrogabili
+                \item hanno generato grafi con nodi rappresentanti le entità coinvolte
+                \item e archi rappresentanti le connessioni tra loro,
             \end{itemize}
             
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
     
-    \begin{frame}[noframenumbering,standout]
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/panamapapers/graph.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item il tutto interrogabile
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Questo è uno dei più eclatanti esempi a queste dimensioni
+                \item dell'utilizzo di database a grafi per svolgere un compito
+                \item che altri tipi di database semplicemente non potevano fare
+                \item (almeno i tempi di interrogazione non sarebbero stati umanamente accettabili)
+                \item perché non progettati per effettuare visite su grafi con dati non strutturati.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Nel lavoro svolto per la tesi, non si è parlato di Panama Papers.
+                \item Ma:
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}[noframenumbering, standout]
         \normalfont
         
         \vspace*{0.75cm}
@@ -322,79 +446,529 @@
                 \begin{tikzpicture}[remember picture,overlay]
                     \begin{pgfonlayer}{background}
                         \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
-                            \includegraphics[width = 0.25\paperwidth]{images/LogoUniBGwhiterotatedcut.pdf}
+                            \includegraphics[
+                                width = 0.25\paperwidth
+                            ]{images/LogoUniBGwhiterotatedcut.pdf}
                         };
                     \end{pgfonlayer}
                 \end{tikzpicture}
                 
             \column{0.13\textwidth}
         \end{columns}
-    \end{frame}
-    
-    \section{What are graphs?}
-    
-    \begin{frame}{Milan Metro subway stations and lines (vertices and edges)}
-        \centering
-        \includegraphics[width = 0.78\paperwidth, height = 0.78\paperheight, keepaspectratio]{images/ch2/WikipediaMilanoMetro2021Graphedit.pdf}
-    \end{frame}
-    
-    \section{What about graph databases?}
-    
-    \begin{frame}{Database types ordered by complexity of data}
-        \centering
-        \includegraphics[width = 0.78\paperwidth, height = 0.78\paperheight, keepaspectratio]{images/ch1/BechbergerPerryman2020page8.pdf}
-    \end{frame}
-    
-    
-    \begin{frame}{Your Title}
-        nsectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
-        
-        \begin{itemize}
-        	\item che mostrino l'{\color{mauve}Albero Sintattico},
-        	\item che stampino la {\color{orange}Tabella dei Simboli},
-        	\item e che nello stesso tempo facciano da {\color{blue}Compilatore}.
-        \end{itemize}
-    \end{frame}
-    
-    \section{2 Section}
-    
-    \begin{frame}{Your Title}
-        Lorem ipsum dolor sit amet, conse purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
-        \begin{columns}[t]
-        \column{.30\textwidth}
+        \note[item]{
+            \normalfont
             \begin{itemize}
-            	\item vedere ed esportare l'{\color{yellow}Albero Sintattico} del parsing di un programma
+                \item Facendo uso di un database a grafi per il salvataggio
+                \item e l'interrogazione di dati di un dataset di 5.6 milioni di pubblicazioni scientifiche accademiche da 2.8 milioni di ricercatori,
+                \item applicando al grafo da essi generati un algoritmo di Community Detection,
+                \item ovvero, di individuazione delle communità
+                \item sono state individuate 180 mila Communities.
+                \item Inoltre, è stata sviluppata una Full-Stack Web Application per visualizzare queste communità di collaborazione.
             \end{itemize}
-            \column{.67\textwidth}
-            \vspace*{-25pt}
-            \begin{figure}[H]
-                \centering
-                \noindent\makebox[\textheight]{
+        }
+        \note[item]{
+            \normalfont
+            Più in dettaglio:
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{The work done}
+        \begin{enumerate}
+            \item \textbf{Literature review} of graph theory, graph databases and clustering algorithms.
+            \item \texttt{dblp.org} \textbf{Dataset download, conversion \& import} in ArangoDB Graph DBMS.
+            \item \textbf{Data transformations} to obtain vertices, edges and the complete graph.
+            \item \textbf{Community Detection Algorithm application} on the graph for clustering.
+            \item \textbf{Web Application development} to display the results of the clustering.
+        \end{enumerate}
+        
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize È stata fatta una consultazione in letteratura dei concetti base di teoria dei grafi,
+                \item \footnotesize delle varie caratteristiche dei database a grafi
+                \item \footnotesize e degli algoritmi per l'individuazione delle communities in grafi.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Poi è stato scaricato il dataset da dblp.org, è stato convertito
+                \item \footnotesize e importato su ArangoDB, il graph database management system scelto.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Le collezioni di dati sono state sottoposte a trasformazioni per ottenere vertici,
+                \item \footnotesize archi e da questi il grafo completo dell'intero dataset.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Su tale grafo poi è stato applicato un Label Propagation Community Detection Algorithm,
+                \item \footnotesize ovvero un algoritmo a propagazione di etichette per l'individuazione delle communità di collaborazione scientifica.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize In fine, è stata sviluppata una Web Application per visualizzare le communities individuate.
+            \end{itemize}
+        }
+        \note[item]{
+            \footnotesize Vediamoli uno ad uno...
+            
+            \large {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Graph databases}
+        \centering
+        \includegraphics[width = 0.78\paperwidth, height = 0.78\paperheight, keepaspectratio]{images/BechbergerPerryman2020page8.pdf}
+        
+        \note[item]{
+            \begin{itemize}
+                \item ... più i dati sono interconnessi e strutturati in modo complesso,
+                \item più fa senso usare database a grafi
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Inoltre se i nested JOINs da fare durante un'interrogazione sono più di 3 livelli di profondità,
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
                     \includegraphics[
-                        width=0.5\paperwidth,
-                        height=0.5\paperheight,
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
                         keepaspectratio
-                    ]{images/LogoUniBGwhiterotatedcut.pdf}
-                }
-            \end{figure}
+                    ]{images/PregelDetectedCommunityOtherVerticesResultcut.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item ovverò, in termini di grafi, se bisogna fare più di 3 salti di attraversamento degli archi,
+                \item allora i tempi di interrogazione usando database tradizionali diventano proibitivi.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Dunque, vediamo ora concretamente cosa è stato fatto.
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Le macchine}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/machinesphotocut.jpg}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            \begin{itemize}
+                \item Al fine di hostare il database,
+                \item servire l'API della Web Application
+                \item e l'interfaccia lato frontend del sito,
+                \item 3 macchine separate, un router e uno switch sono stati usati.
+                \item La quarta macchina è stata usata a scopi di sviluppo e accesso remoto.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Una volta installato i sistemi operativi e ArangoDB sula macchina scelta come host del database...
+            \end{itemize}
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{The dataset: dblp.org}
+        \begin{center}
+            \vspace*{-0.1cm}
+            \includegraphics[
+                width = 0.70\paperwidth,
+                height = 0.70\paperheight,
+                keepaspectratio
+            ]{images/dblpdatasetdownload.pdf}
+        \end{center}
+        
+        \vspace*{-0.3cm}
+        {\color{darkgray}The dataset:}
+        \begin{columns}[t]
+            \column{.50\textwidth}
+                \vspace*{-0.6cm}
+                \begin{itemize}
+                	\item Compressed archive of 623 MB.
+                	\item Once decompressed: Single XML file of 3.2 GB.
+                \end{itemize}
+                
+            \column{.50\textwidth}
+                \vspace*{-0.6cm}
+                \begin{itemize}
+                	\item 8.5 million XML entries on publications, authors, journals, institutions, citations etc.
+                \end{itemize}
         \end{columns}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
     \end{frame}
     
-    \begin{frame}{Your Title}
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut t, placerat ac, adipiscing vitae,felis. Curabitur dictum gravida mauris. Nam arcu libero,nonummy eget, consectetuer id, vulputate a,
+    \begin{frame}{Data conversion, import and transformations}
+        \begin{center}
+            \vspace*{-0.1cm}
+            \includegraphics[
+                width = 0.7\paperwidth,
+                height = 0.7\paperheight,
+                keepaspectratio
+            ]{images/datatransformations.pdf}
+        \end{center}
+        
+        \vspace*{-0.3cm}
+        {\color{darkgray}The steps:}
+        \begin{columns}[t]
+            \column{.50\textwidth}
+                \vspace*{-0.3cm}
+                \begin{enumerate}
+                	\item \small Conversion from XML to line JSON;
+                	\item \small Import in ArangoDB collection;
+                \end{enumerate}
+                
+            \column{.50\textwidth}
+                \vspace*{-1.3cm}
+                \begin{enumerate}
+                    \setcounter{enumi}{2}
+                	\item \small Transform imported data to vertex documents;
+                	\item \small Link vertices by edges;
+                	\item \small Build the graph.
+                \end{enumerate}
+        \end{columns}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
     \end{frame}
     
-    \section{3 Section}
-    
-    \begin{frame}{Your Title}
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur
+    \begin{frame}{The graph}
+        
+        \begin{columns}[t]
+            \column{.30\textwidth}
+                \small The obtained final graph:
+                
+            \column{.7\textwidth}
+                \begin{center}
+                    \vspace*{-0.8cm}
+                    \hspace*{0.1cm}
+                    \includegraphics[
+                        width = 1\textwidth,
+                        height = 0.85\paperheight,
+                        keepaspectratio
+                    ]{images/SnapshotArangoDBGraphPrevidiMazzolenishort.png}
+                \end{center}
+        \end{columns}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
     \end{frame}
     
-    \begin{frame}
-    \setbeamertemplate{background}{red}
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae,felis. Curabitur
+    \begin{frame}{Pregel Label Propagation Community Detection Algorithm}
+        \begin{center}
+            \vspace*{-0.1cm}
+            \includegraphics[
+                width = 0.85\paperwidth,
+                height = 0.85\paperheight,
+                keepaspectratio
+            ]{images/labelpropagation.pdf}
+        \end{center}
+        
+        \vspace*{-0.3cm}
+        {\color{darkgray}The algorithm:}
+        \begin{columns}[t]
+            \column{.50\textwidth}
+                \vspace*{-0.4cm}
+                \begin{enumerate}
+                	\item \small Every vertex is labeled with a unique label.
+                	\item \small The labels are propagated from vertex to vertex.
+                	\item \small At the end of an iteration, each vertex updates its label to the one with maximum weight of neighbor vertices.
+                \end{enumerate}
+                
+            \column{.50\textwidth}
+                \vspace*{-0.7cm}
+                \begin{enumerate}
+                    \setcounter{enumi}{3}
+                	\item \small Convergence is reached when each vertex is labeled as the majority of its neighbors.
+                	It may happen that convergence is not reached in a reasonable time.
+                	In such cases, setting a maximum number of iterations would be a trade-off between accuracy and execution time.
+                \end{enumerate}
+        \end{columns}
+        \note[item]{
+            Every vertex is labeled with a unique label.
+        }
+        \note[item]{
+            The labels are propagated from vertex to vertex throughout the graph.
+        }
+        \note[item]{
+            At the end of each propagation iteration, each vertex updates its label to match the one with the maximum weight, which is calculated based on the weights of neighbor vertices and their relationships.
+            Ties are broken uniformly and randomly.
+        }
+        \note[item]{
+            Convergence is reached when each vertex is labeled as the majority of its neighbors.
+            It may happen that convergence on a single solution is not reached in a reasonable time. In such cases, a trade-off between accuracy and execution time would be setting a maximum number of iterations to avoid maybe never-ending execution.
+            
+            {\color{blue}\textit{go to next slide}}
+        }
     \end{frame}
     
+    \begin{frame}{A generic Pregel algorithm}
+        
+        \hspace*{-0.7cm}
+        {\color{darkgray}Pregel's supersteps:}
+        \begin{columns}[t]
+            \column{.35\textwidth}
+                \vspace*{-0.3cm}
+                
+                \hspace*{-0.1cm}
+                \small \textbf{Diffusion}: information is propagated from vertex to neighbors
+                
+                \hspace*{-0.1cm}
+                \small \textbf{Fusion}: information is aggregated from neighbors to a set of entities
+                
+            \column{.65\textwidth}
+                \vspace*{-1cm}
+                \hspace*{-2cm}
+                \begin{center}
+                    \includegraphics[
+                        width = 0.6\paperwidth,
+                        height = 0.6\paperheight,
+                        keepaspectratio
+                    ]{images/pregelpseudocode.pdf}
+                \end{center}
+                
+                \vspace*{-0.1cm}
+                \begin{center}
+                    \hspace*{-4.7cm}
+                    \includegraphics[
+                        width = 0.8\paperwidth,
+                        height = 0.8\paperheight,
+                        keepaspectratio
+                    ]{images/ArangoDBCustomPregel2020sendmessage.pdf}
+                \end{center}
+        \end{columns}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results}
+        \begin{center}
+            \vspace*{-0.1cm}
+            \includegraphics[
+                width = 0.8\paperwidth,
+                height = 0.8\paperheight,
+                keepaspectratio
+            ]{images/communitiesdetectedtable.pdf}
+        \end{center}
+        
+        \vspace*{-0.3cm}
+        {\color{darkgray}The steps:}
+        \begin{columns}[t]
+            \column{.50\textwidth}
+                \vspace*{-0.3cm}
+                \begin{enumerate}
+                	\item \small Conversion from XML to line JSON;
+                	\item \small Import in ArangoDB collection;
+                \end{enumerate}
+                
+            \column{.50\textwidth}
+                \vspace*{-1.3cm}
+                \begin{enumerate}
+                    \setcounter{enumi}{2}
+                	\item \small Transform imported data to vertex documents;
+                	\item \small Link vertices by edges;
+                	\item \small Build the graph.
+                \end{enumerate}
+        \end{columns}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Web Application's Architecture}
+        \begin{center}
+            \vspace*{-0.1cm}
+            \includegraphics[
+                width = 0.9\paperwidth,
+                height = 0.9\paperheight,
+                keepaspectratio
+            ]{images/architecture.pdf}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{GraphQL API}
+        \begin{center}
+            \vspace*{-3cm}
+            \hspace*{-0.3cm}
+            \includegraphics[
+                width = 0.9\paperwidth,
+                height = 0.9\paperheight,
+                keepaspectratio
+            ]{images/graphqlapollonew.pdf}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Frontend UI Layout}
+        \begin{center}
+            \vspace*{-0.6cm}
+            \includegraphics[
+                width = 0.85\paperwidth,
+                height = 0.85\paperheight,
+                keepaspectratio
+            ]{images/frontendlayout.pdf}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Frontend UI Search Form}
+        \begin{center}
+            \vspace*{-1.6cm}
+            \hspace*{-1cm}
+            \includegraphics[
+                width = 0.95\paperwidth,
+                height = 0.95\paperheight,
+                keepaspectratio
+            ]{images/frontendsearchformautocompletenew.pdf}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (Searching for "Angelo Gargantini")}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphGargantini.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (Angelo Gargantini)}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphGargantiniZoom.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{}
+        \begin{tikzpicture}[remember picture,overlay]
+            \begin{pgfonlayer}{background}
+                \node[anchor=south east,outer sep=0pt,inner sep=0pt] at ($(current page.south east) +(-0in,0in)$) {
+                    \includegraphics[
+                        width = 1\paperwidth,
+                        height = 1\paperheight,
+                        keepaspectratio
+                    ]{images/SnapshotLoadedGraphGargantiniZoomMore.png}
+                };
+            \end{pgfonlayer}
+        \end{tikzpicture}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (Patrizia Scandurra)}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphScandurraZoomMore.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (Giuseppe Psaila)}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphPsailaZoomMore.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (Statistical Methods \& Applications Journal)}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphJournalZoom.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
+    
+    \begin{frame}{Results display (ETH Zurich)}
+        \begin{center}
+            \vspace*{-0.83cm}
+            \hspace*{-1.06cm}
+            \includegraphics[
+                width = 1\paperwidth,
+                height = 1\paperheight,
+                keepaspectratio
+            ]{images/SnapshotLoadedGraphETHZurich12.png}
+        \end{center}
+        \note[item]{
+            {\color{blue}\textit{go to next slide}}
+        }
+    \end{frame}
     
     \begin{frame}[standout]
         \normalfont
@@ -403,12 +977,12 @@
         
         \vspace*{0.625cm}
         Questions?
+        
         \vspace*{0.125cm}
         \begin{columns}[t]
             \column{.08\textwidth}
             
             \column{.17\textwidth}
-                \vspace*{0.2cm}
                 \centering\normalsize\break\myauthor
                 
             \column{.25\textwidth}
@@ -421,6 +995,16 @@
                 
             \column{.10\textwidth}
         \end{columns}
+        \note[item]{
+            \normalfont
+            Grazie mille a tutti per l'attenzione!
+        }
+        \note[item]{
+            \normalfont
+            Se avete delle domande...
+            
+            {\color{orange}\textit{wait for questions}}
+        }
     \end{frame}
 
 \end{document}
