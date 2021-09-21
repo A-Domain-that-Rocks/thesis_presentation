@@ -1,4 +1,9 @@
-\documentclass[aspectratio = 169, 15pt]{beamer}
+\documentclass[aspectratio = 169, 15pt, trans]{beamer}
+% use trans option for only slides.
+% use beamer option for slides and notes side by side.
+% use slides option for slides and notes side by side.
+% use handout option for 4 in 1 slides and note.
+
 \input{functions/constants.tex}
 \input{functions/styles/stylesColors.tex}
 
@@ -10,7 +15,7 @@
     titleformat frame = regular,% can be regular, smallcaps, allsmallcaps, allcaps
     sectionpage = simple,% can be none, simple, progressbar
     subsectionpage = none,% can be none, simple, progressbar
-    numbering = none,% for slide numbers can be none, counter, fraction
+    numbering = fraction,% for slide numbers can be none, counter, fraction
     background = light% for slides and text dark light contrasts. Can be light or dark
 ]{metropolis}
 
@@ -61,9 +66,23 @@
 
 %%%%% notes %%%%%
 \usepackage{pgfpages}
+\mode<handout>{% insert handout in \documentclass[handout]{beamer}
+    \pgfpagesuselayout{4 on 1}[
+        a4paper,
+        border shrink=5mm,
+        landscape
+    ]
+    
+    \setbeameroption{show notes}
+}
+
+\mode<beamer>{% insert beamer in \documentclass[beamer]{beamer}
+    \setbeameroption{show notes on second screen=right}
+}
+
 %\setbeameroption{hide notes}% Show only slides
 %\setbeameroption{show only notes}% Show only notes
-\setbeameroption{show notes on second screen=bottom}% Show notes and slides
+%\setbeameroption{show notes on second screen=bottom}% Show notes and slides
 \setbeamerfont{note page}{size=\large}
 \setbeamertemplate{itemize/enumerate subbody begin}{\large}
 %%%%%%%%%%%%%%%%%
@@ -319,7 +338,11 @@
             \end{pgfonlayer}
         \end{tikzpicture}
         \note[item]{
-            Come si può indagare su un dataset così immenso e in gran parte fatto di dati non strutturati?
+            \begin{itemize}
+                \item Una domanda sorge spontanea:
+                \item Come si può indagare su un dataset così immenso
+                \item e in gran parte fatto di dati non strutturati?
+            \end{itemize}
             
             {\color{blue}\textit{go to next slide}}
         }
@@ -663,13 +686,14 @@
     
     \begin{frame}{The graph}
         
-        \begin{columns}[t]
+        \begin{columns}
             \column{.30\textwidth}
-                \small The obtained final graph:
-                
-            \column{.7\textwidth}
+                \small
+                {\color{darkgray}A subgraph of the obtained final graph:}
+            
+            \column{.70\textwidth}
                 \begin{center}
-                    \vspace*{-0.8cm}
+                    \vspace*{-0.2cm}
                     \hspace*{0.1cm}
                     \includegraphics[
                         width = 1\textwidth,
@@ -679,6 +703,20 @@
                 \end{center}
         \end{columns}
         \note[item]{
+            Questo è un assaggio del grafo finale, o anche una verifica della sua validità.
+        }
+        \note[item]{
+            Il grafo finale è composto dall'insieme di tutti i vertici del dataset e da tutte le connessioni derivanti dalle informazioni dei loro attributi.
+        }
+        \note[item]{
+            In questo sottografo sono mostrate le connessioni di primo e secondo grado del professor Previdi, il vertice in mezzo.
+        }
+        \note[item]{
+            Si può notare in alto a destra professor Mazzoleni e Scandella.
+        }
+        \note[item]{
+            In alto a sinistra professor Ermidoro e in basso a destra professor Bitanti.
+            
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
@@ -771,36 +809,36 @@
         }
     \end{frame}
     
-    \begin{frame}{Results}
+    \begin{frame}{Clustering results}
         \begin{center}
             \vspace*{-0.1cm}
             \includegraphics[
-                width = 0.8\paperwidth,
-                height = 0.8\paperheight,
+                width = 0.85\paperwidth,
+                height = 0.85\paperheight,
                 keepaspectratio
             ]{images/communitiesdetectedtable.pdf}
         \end{center}
-        
-        \vspace*{-0.3cm}
-        {\color{darkgray}The steps:}
-        \begin{columns}[t]
-            \column{.50\textwidth}
-                \vspace*{-0.3cm}
-                \begin{enumerate}
-                	\item \small Conversion from XML to line JSON;
-                	\item \small Import in ArangoDB collection;
-                \end{enumerate}
-                
-            \column{.50\textwidth}
-                \vspace*{-1.3cm}
-                \begin{enumerate}
-                    \setcounter{enumi}{2}
-                	\item \small Transform imported data to vertex documents;
-                	\item \small Link vertices by edges;
-                	\item \small Build the graph.
-                \end{enumerate}
-        \end{columns}
         \note[item]{
+            \begin{itemize}
+                \item Nel grafo fatto da 8 milioni e mezzo di vertici e 24 milioni di archi,
+                \item sono state individuate 187 milla communità.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Mediamente in una community ci sono 
+                \item 16 ricercatori, 2 instituti di affiliazione, 1 journal.
+                \item Inoltre, generalmente i nodi di una community hanno fatto mediamente 40 pubblicazioni scientifiche e le pubblicazioni sono associate alla stessa scuola.
+            \end{itemize}
+            
+        }
+        \note[item]{
+            \begin{itemize}
+                \item Per vedere questi risultati in maniare visualmente apprezzabile,
+                \item è stata sviluppata una Full-stack Web Application.
+                \item Vediamo come è fatta:
+            \end{itemize}
+            
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
@@ -850,7 +888,7 @@
     
     \begin{frame}{Frontend UI Search Form}
         \begin{center}
-            \vspace*{-1.6cm}
+            \vspace*{0.2cm}
             \hspace*{-1cm}
             \includegraphics[
                 width = 0.95\paperwidth,
@@ -859,6 +897,33 @@
             ]{images/frontendsearchformautocompletenew.pdf}
         \end{center}
         \note[item]{
+            \begin{itemize}
+                \item \footnotesize La ricerca è implementata con una feature di autocompletamento
+                \item \footnotesize in modo che l'utente possa selezionare un nodo dall'elenco dei nodi suggeriti
+                \item \footnotesize e in background il suo nome o titolo verrà tradotto nel suo ID
+                \item \footnotesize così poi da poterlo usare mentre si richiede il suo grafo delle collaborazioni.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Nell'esempio mostrato in slide
+                \item \footnotesize si è cercato il nodo rappresentante un autore di pubblicazioni scientifiche
+                \item \footnotesize di nome "Antonio Ferramosca"
+                {\color{orange}\textit{smile}}
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Gli altri due campi da compilare sono il minimum e il maximum depth.
+                \item \footnotesize Essi rappresentano le distanze minime e massime che i nodi da visualizzare devono avere dal nodo di partenza.
+            \end{itemize}
+        }
+        \note[item]{
+            \begin{itemize}
+                \item \footnotesize Vediamo un caso concreto.
+                \item \footnotesize Ricerchiamo il grafo delle communità di collaborazione del professor Gargantini.
+            \end{itemize}
+            
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
@@ -871,7 +936,7 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphGargantini.png}
+            ]{images/SnapshotLoadedGraphGargantininew.png}
         \end{center}
         \note[item]{
             {\color{blue}\textit{go to next slide}}
@@ -886,7 +951,7 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphGargantiniZoom.png}
+            ]{images/SnapshotLoadedGraphGargantiniZoomnew.png}
         \end{center}
         \note[item]{
             {\color{blue}\textit{go to next slide}}
@@ -901,7 +966,7 @@
                         width = 1\paperwidth,
                         height = 1\paperheight,
                         keepaspectratio
-                    ]{images/SnapshotLoadedGraphGargantiniZoomMore.png}
+                    ]{images/SnapshotLoadedGraphGargantiniZoomMorenew.png}
                 };
             \end{pgfonlayer}
         \end{tikzpicture}
@@ -918,7 +983,7 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphScandurraZoomMore.png}
+            ]{images/SnapshotLoadedGraphScandurraZoomMorenew.png}
         \end{center}
         \note[item]{
             {\color{blue}\textit{go to next slide}}
@@ -933,9 +998,19 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphPsailaZoomMore.png}
+            ]{images/SnapshotLoadedGraphPsailaZoomMorenew.png}
         \end{center}
         \note[item]{
+            In questa slide è mostrato zoomato il grafo delle communities di collaborazione del prof. Psaila.
+        }
+        \note[item]{
+            È possibile riconoscere subito i suoi assistenti, Fosci e Pelucchi.
+            
+            {\color{blue}\textit{go to next slide}}
+        }
+        \note[item]{
+            Nella successiva slide verrà mostrato il grafo delle communità di collaborazione accademica ora non più di un autore specifico ... 
+            
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
@@ -948,9 +1023,11 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphJournalZoom.png}
+            ]{images/SnapshotLoadedGraphJournalZoomnew.png}
         \end{center}
         \note[item]{
+            ... ma di un Journal come quello di Statistical Methods \& Applications.
+            
             {\color{blue}\textit{go to next slide}}
         }
     \end{frame}
@@ -963,7 +1040,7 @@
                 width = 1\paperwidth,
                 height = 1\paperheight,
                 keepaspectratio
-            ]{images/SnapshotLoadedGraphETHZurich12.png}
+            ]{images/SnapshotLoadedGraphETHZurich12new.png}
         \end{center}
         \note[item]{
             {\color{blue}\textit{go to next slide}}
