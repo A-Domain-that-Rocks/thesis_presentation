@@ -15,7 +15,7 @@
     titleformat frame = regular,% can be regular, smallcaps, allsmallcaps, allcaps
     sectionpage = simple,% can be none, simple, progressbar
     subsectionpage = none,% can be none, simple, progressbar
-    numbering = fraction,% for slide numbers can be none, counter, fraction
+    numbering = none,% for slide numbers can be none, counter, fraction
     background = light% for slides and text dark light contrasts. Can be light or dark
 ]{metropolis}
 
@@ -772,7 +772,7 @@
     \end{frame}
     
     \begin{frame}{Pregel Label Propagation Community Detection Algorithm}
-        \vspace*{1cm}
+        \vspace*{0.5cm}
         \begin{center}
             \includegraphics[
                 width = 0.85\paperwidth,
@@ -781,11 +781,11 @@
             ]{images/labelpropagation.pdf}
         \end{center}
         
-        \vspace*{0.5cm}
+        \vspace*{0.25cm}
         {\color{darkgray}The algorithm:}
         \begin{columns}[t]
             \column{.50\textwidth}
-                \vspace*{0.1cm}
+                \vspace*{-0.1cm}
                 \begin{enumerate}
                 	\item \small Initially every vertex is labeled with a unique label.
                 	\item \small The labels are propagated from vertex to vertex iteratively.
@@ -1329,6 +1329,7 @@
             \column{.08\textwidth}
             
             \column{.17\textwidth}
+                \vspace*{0.2cm}
                 \centering\normalsize\break\myauthor
                 
             \column{.25\textwidth}
@@ -1337,7 +1338,9 @@
                     \large\textbf{\textsc{\break\mydocumenttitle}}
                 \end{flushright}
                 
-            \column{.315\textwidth} \scriptsize\normalfont\break\mydocumentsubtitle
+            \column{.315\textwidth}
+                \vspace*{0.05cm}
+                \scriptsize\normalfont\break\mydocumentsubtitle
                 
             \column{.10\textwidth}
         \end{columns}
